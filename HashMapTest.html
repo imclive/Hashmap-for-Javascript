@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HashMapTest</title>
+    <script src="JsHashMap.js"></script>
+</head>
+<body>
+<script>
+    var hs = new HashMap();
+    hs.put('asd', 123)
+    hs.put('bqwe', 456)
+    hs.put('czx', 789)
+    hs.put('dcv', {a: 1, b: 2})
+    hs.put('edf', 123)
+    hs.put('fsdf', 456)
+    hs.put('gdf', 789)
+    hs.put('hds', {a: 1, b: 2})
+    hs.put('idc', 123)
+    hs.put('jdf', 456)
+    hs.put('ker', 789)
+    hs.put('lsd', [1, 2, 3])
+    hs.put('mvr', {a: 1, b: 2, c: {d: 2}})
+    hs.put("vvv", null)
+    hs.put('', 'asdasd')
+    console.log(hs.get(''))
+    console.log(hs.get("qqq"))
+
+    console.log(hs.containsKey('asd'))
+    console.log(hs.get('asd'))
+
+    hs.remove('asd')
+    console.log(hs.containsKey('asd'))
+
+    console.log(hs.containsValue({a: 1, b: 2, c: {d: 2}}))
+    console.log(hs.containsValue(123))
+
+    console.log(hs.get('asd'))
+    console.log(hs.size())
+    var en = hs.getEntries();
+
+    console.log(en)
+
+    en.forEach((item) => {
+        console.log(item.key)
+        console.log(item.value)
+    })
+
+    hs.clear();
+    console.log(hs.isEmpty())
+</script>
+</body>
+</html>
